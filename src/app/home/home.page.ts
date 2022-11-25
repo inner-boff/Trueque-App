@@ -25,16 +25,16 @@ export class HomePage {
     celular: '',
     password: '',
     foto: '',
-   
+
     nombre: '',
-    
+
   };
 
   uid = '';
 
-  
+
   constructor(
-   
+
     private authService: AuthService,
     private router: Router,
     public proveedor: Proveedor1Service,
@@ -45,7 +45,8 @@ export class HomePage {
   ) {
     this.avatarService.getUserProfile().subscribe((data) => {
       this.profile = data;
-      //this.firestorageService.database.collectionGroup();
+      
+      
     })
   }
 
@@ -54,13 +55,13 @@ export class HomePage {
     this.router.navigateByUrl('/', { replaceUrl: true })
   }
 
-  async changeImage(){
+  async changeImage() {
     const image = await Camera.getPhoto({
       quality: 90,
       allowEditing: false,
       resultType: CameraResultType.Base64,
       source: CameraSource.Photos, // camara, fotos o prompt
-      
+
     });
     console.log('esta es la imagen:' + image);
 
@@ -83,11 +84,6 @@ export class HomePage {
 
   }
 
-  // cargarImagenDelRegistro() {
-  //   const user = this.firestorageService.getUserProfile()
-    
-  // }
-
   initCliente() {
     this.uid = '';
     this.cliente = {
@@ -97,17 +93,17 @@ export class HomePage {
       password: '',
       foto: '',
       nombre: '',
-      
+
     };
     console.log(this.cliente);
-}
-
-  mostrarImagen(){
-    this.cliente.foto;
-    console.log( this.cliente.foto);
   }
 
-  mostrarFoto(){
+  mostrarImagen() {
+    this.cliente.foto;
+    console.log(this.cliente.foto);
+  }
+
+  mostrarFoto() {
     this.cliente.email;
   }
 

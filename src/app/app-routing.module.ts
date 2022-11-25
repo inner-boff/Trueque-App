@@ -55,6 +55,11 @@ const routes: Routes = [
     path: 'detalle-publicacion',
     loadChildren: () => import('./detalle-publicacion/detalle-publicacion.module').then( m => m.DetallePublicacionPageModule)
   },
+  
+  {
+    path: 'ayuda',
+    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+  },
   {
     path: '**',
     redirectTo: '',

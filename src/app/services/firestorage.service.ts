@@ -57,8 +57,7 @@ getDoc<tipo>(path: string, id: string) {
 // aqui en teoria estamos guardando la info del usuario
 getUserProfile() {
   const user = this.auth.currentUser;
-  //const userDocRef = doc(this.firestore, 'users/' + user.uid);
-  //return docData(userDocRef);
+ 
 }
 
  }
