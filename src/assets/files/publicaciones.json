@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "numeroPublicacion": 1,
+            "usuarioId": 1,
+            "nombrePublicacion": "Guitala Electrica ",
+            "description":"Guitarra elecrica, usada en perfecto estado",            
+            "image": "guitarra.jpg"
+
+        },
+        {
+            "numeroId": 2,
+            "usuarioId": 2,
+            "nombrePublicacion": "Xbox Obe ",            
+            "description":"Xbox One, con todos los accesorios ",            
+            "image": "xboxOne.jpg"
+        },
+        
+
+        {
+            "numeroId": 3,
+            "usuarioId": 3,
+            "nombrePublicacion": "Notebook Asus ",               
+            "description": "Notebook Asus, Core i5 8GB ram, 500Gb, impecable",           
+            "image": "asus.jpg"
+            
+        },
+        {
+            "numeroId": 4,
+            "usuarioId": 4,
+            "nombrePublicacion": "Ps4 ",
+            "description":"Ps4, usada en perfecto estado",            
+            "image": "ps4.jpg"
+        },
+        {
+            "numeroId": 5,
+            "usuarioId": 5,
+            "nombrePublicacion": "Iphone Pro Max ",
+            "description":"Iphone proMax, usada en perfecto estado",            
+            "image": "iphoneProMax.jpg"
+        }
+
+    ]
+    }

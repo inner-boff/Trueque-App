@@ -1,0 +1,71 @@
+<div class="contenedor"
+  style="background-image: url('../../assets/img/wave-2.01.png') ; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+  <div class="body">
+
+    <img class="logo" src="../../assets/img/new.png" alt="logo">
+    <h1>Registro</h1>
+    
+      <div *ngIf="!uid.length">
+        
+        <h3 class="subtitulo encabezado">Ingrese sus datos </h3>
+        <ion-item *ngIf="!ingresarEnable">
+          <ion-label class="normal" position="floating">
+            Nombre:
+          </ion-label>
+          <ion-input [(ngModel)]="cliente.nombre" class="normal" placeholder="nombre" type="text" inputmode="text">
+          </ion-input>
+        </ion-item>
+        
+        <ion-item >
+          <ion-label  class="normal"   position="floating">
+            Email
+          </ion-label>
+          <ion-input name="email" [(ngModel)]="cliente.email" class="normal" placeholder="dirección de email" type="text" inputmode="text">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="normal" position="floating">
+            Contraseña
+          </ion-label>
+          <ion-input name="email" [(ngModel)]="cliente.password" class="normal" placeholder="contraseña" type="text" inputmode="text">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="normal" position="floating">
+            Celular:
+          </ion-label>
+          <ion-input [(ngModel)]="cliente.celular" class="normal" placeholder="celular" type="text">
+          </ion-input>
+        </ion-item>
+
+
+        <ion-item *ngIf="!ingresarEnable">
+          <ion-label class="normal">
+            Foto:
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button>
+              <label for="file-upload">
+                <ion-icon slot="icon-only" name="images"></ion-icon>
+              </label>
+              <input (change)="newImageUpload($event)" id="file-upload" style="display: none" type="file"
+                accept="image/*">
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+        <ion-item *ngIf="!ingresarEnable">
+          <img class="image" [src]="cliente.foto">
+        </ion-item>
+
+        <div style="text-align: end; margin: 10px;">
+          <button class="btn" expand="full" type="submit"  *ngIf="!ingresarEnable" (click)=" registrofirebase()">Registrarse</button>
+          <p><a routerLink="/login"> <b>Volver</b></a></p>
+
+        </div>
+        
+      </div>
+
+  </div>
+
+</div>

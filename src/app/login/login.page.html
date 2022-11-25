@@ -1,0 +1,80 @@
+<!-- 
+<div class="contenedor" style="background-image: url('../../assets/img/ObeliscoBA2017.jpg') ; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+  
+  <div class="body">
+    
+      <img class="logo" src="../../../assets/img/permission.png" alt="logo">
+      
+      <h1>Login</h1>
+      <form [formGroup]="credentials" (ngSubmit)="login()">
+          <div class="form-floating mb-3">
+              <input type="email" class="form-control" formControlName="email" placeholder="dirección de email">
+              <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors"> <b>La dirección de email no es válida</b></ion-note>
+              <label >Mail</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" formControlName="password"  placeholder="contraseña">
+              <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors"> <b>Contraseña incorrecta</b></ion-note>
+              <label >Contraseña</label>
+            </div>
+      
+      
+        <div class="d-grid gap-2">
+            
+            
+          <button class="btn btn-primary" expand="full" type="submit" [disabled]="!credentials.valid">Login</button>
+          <p><a routerLink="/recuperar-usuario"> <b>Recuperar contraseña</b></a></p>
+          
+          <p>No tienes cuenta? <a routerLink="/registro"> <b>Registarse</b></a></p>
+        </div>
+        
+      
+      </form>
+  </div>
+  </div>
+  
+
+ -->
+
+
+   <body>
+    <img class="wave" src="../../assets/img/wave.png">
+    <div class="container">
+      <div class="img">
+        <img src="../../assets/img/currency.png">
+      </div>
+      <div class="login-content">
+        <form [formGroup]="credentials" (ngSubmit)="login()">
+          <img src="../../assets/icon/avatar.svg">
+          <h2 class="title">Bienvenido</h2>
+                 <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" formControlName="email" placeholder="dirección de email">
+                      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors"> <b>La dirección de email no es válida</b></ion-note>
+                      <label >Mail</label>
+                    </div>
+                 </div>
+                 <div class="input-div pass">
+                    <div class="i"> 
+                       <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control" formControlName="password"  placeholder="contraseña">
+                      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors"> <b>Contraseña incorrecta</b></ion-note>
+                      <label >Contraseña</label>
+                   </div>
+                </div>
+                <p><a routerLink="/recuperar-usuario"> <b>Recuperar contraseña</b></a></p>
+          
+                <p> <a routerLink="/registro"> No tienes cuenta, <b>Registarse</b></a></p>
+                <input type="submit" class="btn" value="Login">
+              </form>
+          </div>
+      </div>
+      
+  </body>
+  
+

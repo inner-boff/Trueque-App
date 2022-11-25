@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="myColor">
+    <ion-title>Trocadores</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="permission">
+    
+    <ion-item *ngFor="let user of searchedUser">
+      <ion-avatar slot="start">
+        <img src="../../assets/img/Users/{{user.image}}" />
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label  (click)="IrAPublicacion(user.numeroId, user.numero, user.ubicacion)" >
+        <h2  class="Color">{{user.name}}</h2>
+        <h3>{{user.state}}</h3>
+    
+      </ion-label>
+    </ion-item>
+    <ion-label *ngIf="!permission"> No tienes permiso para ver los clientes </ion-label>
+    
+
+  </ion-list> 
+</ion-content>

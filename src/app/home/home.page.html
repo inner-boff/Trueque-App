@@ -1,0 +1,62 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      
+     
+  
+      <ion-title> BIENVENIDO</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.
+    
+    <ion-list>
+      <ion-item  routerLink="/chat">Publicaciones
+        <ion-icon  color="primary" slot="icon-only"  name="gift-outline" slot="end"></ion-icon>
+        
+      </ion-item>
+      
+      <ion-item>home</ion-item>
+      <ion-item>lugar</ion-item>
+      <ion-item>Hurones</ion-item>
+      <ion-item>Osos</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="logout()">
+          <ion-icon slot="icon-only" name="log-out-outline"> </ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="preview">
+      <ion-avatar (click)="changeImage()">
+        <img class="img"
+          *ngIf="profile?.imageUrl; else placeholder_avatar;"
+          [src]="profile.imageUrl"
+        />
+        <ng-template #placeholder_avatar>
+          <div class="fallback">
+            <p>Seleccione avatar</p>
+          </div>
+        </ng-template>
+      </ion-avatar>
+    </div>
+     
+     
+    
+  
+  </ion-content>
+  
+</div>
+
+
+

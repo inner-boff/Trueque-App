@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="myColor">
+    <ion-title>Publicacion</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="chat"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let publicacion of publicacionesF ">
+      <div class="body">
+        <div>
+          <ion-card class="card">
+
+            <img class="foto" src="../../assets/img//publicaciones/{{publicacion.image}}" />
+
+            <div class="card-title"><b>{{publicacion.nombrePublicacion}}</b> </div>
+            <div class="card-title">
+              <P> description del producto: </P>{{publicacion.description}}
+            </div>
+            <div class="card-title">
+              <P> Contacto: </P>{{telefono}}
+            </div>
+            <div class="mapa">
+
+              <p (click)="prueba()"><b style="color: blue;">Toca aqui para ver la Ubicacion </b></p>
+              <iframe id="frame1" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+
+
+
+          </ion-card>
+
+        </div>
+
+      </div>
+
+
+    </ion-col>
+  </ion-row>
+</ion-content>
+<!-- <div class="contenedor"  >
+  <div class="body" *ngFor="let publicacion of publicacionesF">
+    <img class="foto" src="../../assets/img/publicaciones/{{publicacion.image}}" />
+    
+    <h1 class="card-title">{{publicacion.nombrePublicacion}} </h1>
+    <h3 class="card-title">{{publicacion.description}} </h3>
+
+  </div>
+</div>  -->
