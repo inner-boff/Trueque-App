@@ -12,7 +12,7 @@
 <ion-content>
   <ion-list *ngIf="permission">
     
-    <ion-item *ngFor="let user of searchedUser">
+    <ion-item class="item"  *ngFor="let user of searchedUser">
       <ion-avatar slot="start">
         <img src="../../assets/img/Users/{{user.image}}" />
       </ion-avatar>
